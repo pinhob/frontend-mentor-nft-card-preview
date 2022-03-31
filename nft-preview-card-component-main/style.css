@@ -10,6 +10,7 @@
   --line-dark-blue: hsl(215, 32%, 27%);
   --soft-blue: hsl(215, 51%, 70%);
   --cyan: hsl(178, 100%, 50%);
+  --card-hover-cyan: hsla(178, 100%, 50%, 0.5);
   --white: hsl(0, 0%, 100%);
 }
 
@@ -37,15 +38,43 @@ body {
   padding: 1rem;
 }
 
+.b-card--img-overlay {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  position: inherit;
+}
+
 .b-card__img {
+  justify-self: center;
   border-radius: 8px;
-  width: 95%;
-  margin: auto;
+  max-width: 95%;
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.b-card__overlay-img {
+  justify-self: center;
+  display: block;
+  opacity: 0;
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.b-card__overlay-img:hover {
+  opacity: 1;
+}
+
+.b-card__img:hover {
+  background-color: var(--cyan);
+  /* background-image: url(images/icon-view.svg); */
 }
 
 .b-card__title {
   font-size: 22px;
   font-weight: 600;
+  padding-top: 1rem;
 }
 
 .b-card__title:hover {
@@ -58,7 +87,7 @@ body {
   color: var(--soft-blue);
   font-weight: 300;
   line-height: 26px;
-  padding: 0.7rem 0;
+  padding: 1rem 0;
 }
 
 .b-card__value {
@@ -67,8 +96,18 @@ body {
   font-weight: 600;
 }
 
+.b-card__value::before {
+  content: url(images/icon-ethereum.svg);
+  padding-right: 0.3rem;
+}
+
 .b-card__countdown {
   font-size: 15px;
+}
+
+.b-card__countdown::before {
+  content: url(images/icon-clock.svg);
+  padding-right: 0.3rem;
 }
 
 .b-card--infos-flex {
