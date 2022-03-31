@@ -7,11 +7,15 @@
   font-size: 18px;
   --main-bg: hsl(217, 54%, 11%);
   --card-bg: hsl(216, 50%, 16%);
+  --line-dark-blue: hsl(215, 32%, 27%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --white: hsl(0, 0%, 100%);
 }
 
 body {
   background-color: var(--main-bg); 
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   height: 100%;
   display: flex;
   align-items: center;
@@ -21,7 +25,7 @@ body {
 }
 
 .b-card {
-  align-items: center;
+  align-items: flex-start;
   background-color: var(--card-bg);
   box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0952917);
   border-radius: 15px;
@@ -30,11 +34,43 @@ body {
   height: 543px;
   justify-content: center;
   width: 327px;
+  padding: 1rem;
 }
 
 .b-card__img {
   border-radius: 8px;
-  width: 90%;
+  width: 95%;
+  margin: auto;
+}
+
+.b-card__title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.b-card__text {
+  color: var(--soft-blue);
+  font-weight: 300;
+  line-height: 26px;
+  padding: 0.7rem 0;
+}
+
+.b-card__value {
+  color: var(--cyan);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.b-card__countdown {
+  font-size: 15px;
+}
+
+.b-card--infos-flex {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
 }
 
 
@@ -50,4 +86,6 @@ footer {
   position: fixed;
   text-align: center;
   width: 100%;
+  background-color: var(--card-bg);
+  padding: 1rem 0;
 }
