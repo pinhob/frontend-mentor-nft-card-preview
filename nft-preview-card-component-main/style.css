@@ -48,6 +48,12 @@ body {
   font-weight: 600;
 }
 
+.b-card__title:hover {
+  color: var(--cyan);
+  cursor: pointer;
+  font-weight: 700;
+}
+
 .b-card__text {
   color: var(--soft-blue);
   font-weight: 300;
