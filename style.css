@@ -1,16 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Outfit:wght@300;400;600&display=swap');
 
-* {
-  padding: 0;
-  margin: 0;
-  font-family: 'Outfit', sans-serif;
-  font-size: 18px;
-  --main-bg: hsl(217, 54%, 11%);
-  --card-bg: hsl(216, 50%, 16%);
+:root {
+  --color-bg: hsl(217, 54%, 11%);
+  --color-card-bg: hsl(216, 50%, 16%);
+  --color-text-primary: hsl(0, 0%, 100%);
+  --color-text-secondary: hsl(215, 51%, 70%);
   --line-dark-blue: hsl(215, 32%, 27%);
-  --soft-blue: hsl(215, 51%, 70%);
-  --cyan: hsl(178, 100%, 50%);
+  --color-text-tertiary: hsl(178, 100%, 50%);
   --card-hover-cyan: hsla(178, 100%, 50%, 0.5);
-  --white: hsl(0, 0%, 100%);
   --opac-cyan: hsla(178, 100%, 50%, 0.5);
+  --text-size: 1rem;
+
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+  color: var(--color-text-primary);
+  font-size: 1.125rem;
+}
+
+body {
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 24px;
+}
+
+main.card {
+  flex: 0 1 350px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  background-color: var(--color-card-bg);
+  padding: 24px;
+  padding-bottom: 32px;
+  box-shadow: 0px 25px 50px hsla(0, 0%, 0%, 0.095);
+  border-radius: 16px;
+}
+
+img.card__image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+h1.card__title {
+  font-size: calc(24 / 16 * 1rem);
+}
+
+p.card__description {
+  font-size: var(--text-size);
+  color: var(--color-text-secondary);
+  font-weight: 300;
+}
+
+h2.card__price {
+  font-size: var(--text-size);
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+  margin-right: auto;
+}
+
+h2.card__price::before {
+  content: url('images/icon-ethereum.svg');
+  margin-right: 6px;
+  position: relative;
+  top: 2px;
+}
+
+h4.card__countdown {
+  font-size: var(--text-size);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+h4.card__countdown::before {
+  content: url('images/icon-clock.svg');
+  margin-right: 6px;
+  position: relative;
+  top: 2px;
+}
+
+h3.card__author {
+  font-size: var(--text-size);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+footer {
+  display: none;
+}
+
+@media (min-width: 550px) {
+  footer {
+    display: revert;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  footer a {
+    color: var(--color-text-tertiary);
+  }
+
+  footer a:hover {
+    color: var(--card-hover-cyan);
+  }
 }
