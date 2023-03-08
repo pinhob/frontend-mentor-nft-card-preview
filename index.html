@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>NFT preview card component | Frontend Mentor Challenge</title>
 
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <main class="card">
-    <img src="images/image-equilibrium.jpg" alt="A multicolored cuble in the middle of a dark blue enviroment" class="card__image">
-    <h1 class="card__title">Equilibrium #3429</h1>
+    <a href="#">
+    <div class="card__img__wrapper">
+      <img src="images/image-equilibrium.jpg" alt="A multicolored cuble in the middle of a dark blue enviroment"
+        class="card__image">
+    </div>
+    </a>
+    <h1 class="card__title"><a href="#">Equilibrium #3429</a></h1>
     <p class="card__description">Our Equilibrium collection promotes balance and calm.</p>
     <h2 class="card__price">0.041 ETH</h2>
     <h4 class="card__countdown">3 days left</h4>
-    
-    <h3 class="card__author">Creation of Jules Wyvern</h3>
+    <div class="card__divider"></div>
+    <img src="images/image-avatar.png"
+      alt="The picture of the author, showing a close-up of a white man with blue eyes and brown hair"
+      class="card__author__avatar">
+    <h3 class="card__author">Creation of <a href="#" class="card__author__name">Jules Wyvern</a></h3>
   </main>
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/pinhob">Bruno Pinho</a>.
-  </footer>
 </body>
+
 </html>
