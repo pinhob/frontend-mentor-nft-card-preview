@@ -84,29 +84,29 @@ p.card__description {
   font-weight: 300;
 }
 
-h2, h3, h4 {
+span {
   font-size: 1rem;
 }
 
-h2.card__price {
+span.card__price {
   font-weight: 600;
   color: var(--color-tertiary);
   margin-right: auto;
 }
 
-h2.card__price::before {
+span.card__price::before {
   content: url('images/icon-ethereum.svg');
   margin-right: 6px;
   position: relative;
   top: 2px;
 }
 
-h4.card__countdown {
+span.card__countdown {
   font-weight: 400;
   color: var(--color-secondary);
 }
 
-h4.card__countdown::before {
+span.card__countdown::before {
   content: url('images/icon-clock.svg');
   margin-right: 6px;
   position: relative;
@@ -125,7 +125,7 @@ img.card__author__avatar {
   border-radius: 50%;
 }
 
-h3.card__author {
+span.card__author {
   font-weight: 400;
   color: var(--color-secondary);
   line-height: 33px;
